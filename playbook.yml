@@ -1,0 +1,68 @@
+---
+- hosts: target
+
+  gather_facts: false
+
+  vars:
+    playbook_variable: === value of playbook_variable ===
+
+  tasks:
+    - name: Print general group variable
+      debug:
+        var: general_group_variable
+
+    - name: Print specific group variable
+      debug:
+        var: specific_group_variable
+
+    - name: Print general host variable
+      debug:
+        var: general_host_variable
+
+    - name: Print specific host variable
+      debug:
+        var: specific_host_variable
+
+    - name: Print playbook variable
+      debug:
+        var: playbook_variable
+
+    - name: Import role
+      import_role:
+        name: ansible-variables-role
+
+    - name: Print role variable
+      debug:
+        var: role_variable
+
+    - name: Include variable file
+      include_vars:
+        file: ./other/include_variables.yml
+
+    - name: Print included variable
+      debug:
+        var: include_variable
+
+    - name: Register variable
+      command: echo "=== value of register_variable ==="
+      register: register_variable
+
+    - name: Print registered variable
+      debug:
+        var: register_variable.stdout
+
+    - name: Set variable
+      set_fact:
+        set_fact_variable: === value of set_fact_variable ===
+
+    - name: Print set variable
+      debug:
+        var: set_fact_variable
+
+    - name: Print extra variable (from file)
+      debug:
+        var: file_extra_variable
+
+    - name: Print extra variable (from arguments)
+      debug:
+        var: cmd_extra_variable

@@ -1,0 +1,7 @@
+[target]
+# first host
+localhost
+# last host
+
+[target:vars]
+general_host_variable="=== value of general_host_variable ==="
