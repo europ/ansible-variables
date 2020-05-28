@@ -37,7 +37,7 @@
 
     - name: Include variable file
       include_vars:
-        file: ./other/include_variables.yml
+        file: ./vars/include_variables.yml
 
     - name: Print included variable
       debug:

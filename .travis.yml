@@ -1,0 +1,29 @@
+---
+dist: bionic # Ubuntu 18.04
+language: minimal
+
+matrix:
+  include:
+    - name: Linter-YAML (yamllint)
+      language: python
+      python: 3.8
+      before_install:
+        - pip install yamllint
+      script:
+        - yamllint --config-file ./other/conf/yamllint.yml .
+
+    - name: Linter-YAML (ansible-lint)
+      language: python
+      python: 3.8
+      before_install:
+        - pip install ansible-lint
+      script:
+        - ansible-lint -c ./other/conf/ansible-lint.yml
+
+    - name: Linter-Markdown (markdownlint)
+      language: ruby
+      rvm: 2.7.1
+      before_install:
+        - gem install mdl
+      script:
+        - mdl --style ./other/conf/markdownlint.rb .

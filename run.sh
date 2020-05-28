@@ -11,5 +11,5 @@ command -v ansible-playbook > /dev/null
 ansible-playbook \
     -i inventory \
     -e "cmd_extra_variable='=== value of cmd_extra_variable ==='" \
-    -e @./other/extra_variables.yml \
+    -e @./vars/extra_variables.yml \
     playbook.yml

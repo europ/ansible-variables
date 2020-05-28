@@ -1,6 +1,9 @@
+[![Travis CI Build Status](https://img.shields.io/travis/com/europ/ansible-variables/master?label=Travis%20CI&logo=travis)](https://travis-ci.com/europ/ansible-variables)
+[![License](https://img.shields.io/github/license/europ/ansible-variables?label=License)](https://github.com/europ/ansible-variables/blob/master/LICENSE)
+
 # Ansible Variables
 
-Simple and concise example of all possible cases for variable definition and usage in Ansible.
+Simple and concise example of the most common cases for variable definition and usage in Ansible. [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html) describes all possible cases for variable definition as well as the evaluation precedence.
 
 ### Prerequisites
 
@@ -18,8 +21,8 @@ Simple and concise example of all possible cases for variable definition and usa
 ### Setup
 
 1. repository clone
-2. execute `./run.sh`
+1. execute `./run.sh`
 
 ### Example
 
-![example](img/example.png)
+![example](other/img/example.png)
